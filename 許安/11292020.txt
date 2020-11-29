@@ -1,0 +1,17 @@
+姓名:許安
+
+寫機器人的程式時，通常會先創立很多functions供之後直接呼叫，並把他們和呼叫用的程式分開放，這樣程式碼看起來比較乾淨。
+
+每一個file都會有
+@Override
+  public void initialize() {
+  }
+用來初始化程式。
+
+程式會用很多內建的指令，例如
+import edu.wpi.first.wpilibj2.command.CommandBase;
+import frc.robot.subsystems.shooter.Shooter;
+import frc.robot.subsystems.vision.Limelight;
+
+this是用來取得當前物件的資料的，super用來取得父物件的資料的。
+可以用/**/ 或 // 來註解程式碼，其他人看才可以讀的懂。
