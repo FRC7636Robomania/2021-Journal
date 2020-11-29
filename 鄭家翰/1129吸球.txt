@@ -1,0 +1,32 @@
+public class Intake extends Spinable{
+    private final WPI_VictorSPX intake = new WPI_VictorSPX(5);//設定輸出腳位
+    private String status = "Stop";//預設裝置停止
+    public Intake(){
+        intake.configFactoryDefault();
+        Shuffleboard.getTab("Statue").addString("Intake", this::getStatus);//將吸球的狀態回傳到儀表板(Shuffleboard)上觀察
+
+    }
+    @Override
+    public void forward() {
+        intake.set(ControlMode.PercentOutput, 0.9);
+        status = "Forward";//吸球轉速為90%
+    }
+
+    @Override
+    public void stop() {
+        intake.set(ControlMode.PercentOutput, 0);
+        status = "Stop";//停止
+
+    }
+
+    @Override
+    public void reverse() {
+        intake.set(ControlMode.PercentOutput, -0.9);
+        status = "Reverse";//反轉90%
+    }
+
+    @Override
+    public String getStatus() {
+        return status;//回傳狀態
+    }
+}
