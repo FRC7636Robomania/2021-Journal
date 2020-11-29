@@ -1,1 +1,17 @@
-氣動 很多
+氣動 很多地方有洩氣的問題 要記得使用止洩膠帶
+ m_compressor.setClosedLoopControl(true);
+  if (m_joystick.getRawButton(1)) {
+    m_doubleSolenoid.set(DoubleSolenoid.Value.kForward);
+  } else if (m_joystick.getRawButton(2)) {
+    m_doubleSolenoid.set(DoubleSolenoid.Value.kReverse);
+  }
+(氣動程式紀錄)
+公制英制不能共用
+
+心得:
+今天在寫程式的過程有一個很大的問題，有時候不知道要用物件的哪一個功能來做，
+不過查一下資料還是解決了 成就感get。
+
+
+今日檢討:
+要再一些時間熟悉FRC常用的物件跟功能 速度應該會快一點。
