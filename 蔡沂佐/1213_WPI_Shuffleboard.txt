@@ -1,0 +1,44 @@
+WPI
+沒有慣性輸出(無輸出時為0)
+
+WPI_VictorSPX/WPI_TalonSRX name= new WPI_V/T(0);
+宣告WPI物件
+
+DifferentialDrive=new DifferentialDrive(左輪,右輪);
+宣告物件,自動將右輪反轉
+
+name.configFactoryDefault()
+恢復預設設定(避免衝突)
+name.follow(name)
+跟隨其他馬達(通常後輪)
+
+馬達控制方式
+arcadeDrive(X速度,Z轉向)
+	Y軸前後及Z軸旋轉
+curvatureDrive(X速度,Z曲率,按鈕(布林值))
+	可原地旋轉(按住按鈕)
+tankDrive(左輪速度,右輪速度)
+	用Y軸跟X軸數值控制左輪與右輪速度以控制方向
+
+Shuffleboard
+	camera
+	大概就是先得到影像 然後上傳至Shuffleboard
+	tab
+	藍藍的那排
+	NetworkTableEntry
+	聽說是網絡表(我猜是指網格)
+		tab
+		不可塞東西的框框
+		Layout
+		可塞東西的那個
+	以上可在軟體上右鍵修改
+	但If是用Java寫的 好像不能改
+
+心得
+今天早上的WPI還蠻好理解的 挺和藹可親的
+自己感覺是簡單了一點的馬達控制(有模板可以用)
+然後camera也還可以理解 應該啦 但程式碼有點難記
+但到Shuffleboard的時候 就爆炸到無法理解 有點難過
+聽說下次要再說一次 希望下次可以理解 今天大概有把程式打好 但還沒測試
+然後我自己好像要爆炸了沒有辦法自學如果有時間的話我盡量(小聲滴咕快速念過)
+我很抱歉今天一直在想睡覺的狀態 下次培訓前作息要正常
