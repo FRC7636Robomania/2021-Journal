@@ -1,0 +1,15 @@
+status="Stop"
+	預設狀態&無誤差時
+status="Foward"
+	當方向為負,則向正向轉
+status="Reverse"
+	當方向為正,則向負向轉
+error是x軸上的誤差by limelight
+當error<0.15則直接設定error=0
+若error>10轉速=-0.007*error
+若error<=10轉速=-0.02*error
+
+smartborad
+"output"=-0.01*error(x軸上誤差值)
+"TowerLimit"布林值(from digital)
+"Tower Position"塔的位置
